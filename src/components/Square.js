@@ -1,22 +1,21 @@
 import React from 'react';
 
 const squareStyle = {
-    border: '2px solid brown',
+    border: '2px solid green',
     background: 'lightgreen',
-    marginTop: '-1px',
-    marginRight: '-1px',
-    fontSize: "60px",
-    fontWeight:'bold',
+    fontSize: '60px',
+    fontWeight: '800',
     float: 'left',
     cursor: 'pointer',
     padding: '0px',
-    textAlign: 'center'
+    textAlign: 'center',
+    height: '100px',
+    width: '100px'
 }
 const Square = (props) => {
     return (
-        <button style={squareStyle}>
+        <button style={squareStyle} onClick={() => props.openCard(props.card.id, props.card.img)}>
             {props.card.isOpen ? props.card.img : ''}
-
         </button>
     );
 };
